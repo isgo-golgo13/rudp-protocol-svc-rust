@@ -1,0 +1,15 @@
+workspace = { members = [
+    "rudp-protocol-kit",
+    "rudp-socket-client",
+    "rudp-socket-server",
+    "storage-kit",
+] }
+
+[package]
+name = "rudp-protocol-svc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
