@@ -1,0 +1,12 @@
+FROM rust:latest as builder
+
+WORKDIR /app
+COPY . .
+
+# Build the client
+RUN cargo build --release --package client
+
+FROM debian:buster-slim
+COPY --from=builder /app/target/release/client /usr/local/bin/client
+
+ENTRYPOINT ["/usr/local/bin/client"]
