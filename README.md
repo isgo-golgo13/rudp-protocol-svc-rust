@@ -95,3 +95,36 @@ cargo run -p rudp-socket-server
 cargo test -p rudp-protocol-kit
 cargo test -p storage-kit
 ```
+
+
+## Project Structure
+
+The following layout is final project structure.
+
+```shell
+rudp-protocol-svc
+├── Cargo.toml
+├── Dockerfile.client
+├── Dockerfile.server
+├── Makefile
+├── docker-compose.yaml
+├── rudp-protocol-kit
+│   ├── Cargo.toml
+│   └── src
+│       ├── lib.rs
+│       └── rudp.rs
+├── rudp-socket-client
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+├── rudp-socket-server
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+└── storage-kit
+    ├── Cargo.toml
+    └── src
+        ├── lib.rs
+        ├── storage-repository.rs
+        └── storage.rs
+```
